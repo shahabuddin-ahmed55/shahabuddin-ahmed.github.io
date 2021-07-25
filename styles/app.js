@@ -109,15 +109,17 @@
 
 //  Task No 4
 
-// All inputs by DOM
-var name_i = document.getElementById("name").value;
-var age_i = document.getElementById("age").value;
-var education_i = document.getElementById("edu").value;
-var profession_i = document.getElementById("prof").value;
-var gender_i = document.getElementById("gender").value;
 
 function get() {
+  // All inputs by DOM
+  var name_i = document.getElementById("name").value;
+  var age_i = document.getElementById("age").value;
+  var education_i = document.getElementById("edu").value;
+  var profession_i = document.getElementById("prof").value;
+  var gender_i = document.getElementById("gender").value;
+  console.log(name_i);
   // Constructor
+  var result = new Info(name_i, age_i, education_i, profession_i, gender_i);
   function Info(name_i, age_i, education_i, profession_i, gender_i) {
     this.user_name = name_i;
     this.user_age = age_i;
@@ -126,7 +128,6 @@ function get() {
     this.user_gender = gender_i;
   }
 
-  var result = new Info(name_i, age_i, education_i, profession_i, gender_i);
   console.log(result);
+  console.log(name_i);
 }
-console.log(name_i);

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body{
+      body {
         background: #cbdffa;
       }
-      fieldset{
+      fieldset {
         background: #1876f2;
       }
-      *{
+      * {
         color: #ff0000;
       }
     </style>
@@ -20,45 +20,54 @@
   <body>
     <fieldset>
       <legend><h3>Personal Information</h3></legend>
-    <form action="">
-      <!-- Name -->
-      <label> Name: <input type="text" id="name" /> </label>
-      <br /><br />
+      <form action="">
+        <!-- Name -->
+        <label> Name: <input type="text" id="name" /> </label>
+        <br /><br />
 
-      <!-- Age -->
-      <label> Age: <input type="number" id="age" /> </label>
-      <br /><br />
+        <!-- Age -->
+        <label> Age: <input type="number" id="age" /> </label>
+        <br /><br />
 
-      <!-- Education -->
-      Education:
-      <select name="education" id="edu">
-        <option></option>
-        <option value="matic">Matic</option>
-        <option value="inter">Inter</option>
-        <option value="graduation">Graduation</option>
-        <option value="masters">Masters</option>
-      </select>
-      <br /><br />
-      <!-- Profession -->
+        <!-- Education -->
+        Education:
+        <select name="education" id="edu">
+          <option></option>
+          <option value="matic">Matic</option>
+          <option value="inter">Inter</option>
+          <option value="graduation">Graduation</option>
+          <option value="masters">Masters</option>
+        </select>
+        <br /><br />
 
-      <label>Profession: <input type="text" id="prof" /></label>
-      <br /><br />
+        <!-- Profession -->
 
-      <!-- Gender -->
-      Gender: &nbsp;<label>
-        <input type="radio" name="gender" id="gender" value="male" /> Male
-      </label>
-      <label>
-        <input type="radio" name="gender" id="gender" value="female" /> Female
-      </label>
-      <br><br>
-      <input style="margin-left: 90%;" type="submit" onclick="get()" value="submit"/>
-    </form>
-  </fieldset>
+        Profession:
+        <select name="profession" id="prof">
+          <option></option>
+          <option value="teacher">Teacher</option>
+          <option value="builder">Builder</option>
+          <option value="police-man">Police Man</option>
+          <option value="imam">Imam</option>
+        </select>
+        <br /><br />
 
-
-
-
+        <!-- Gender -->
+        Gender: &nbsp;<label>
+          <input type="radio" name="gender" id="gender" value="male" /> Male
+        </label>
+        <label>
+          <input type="radio" name="gender" id="gender" value="female" /> Female
+        </label>
+        <br /><br />
+        <input
+          style="margin-left: 90%"
+          type="submit"
+          onclick="get()"
+          value="submit"
+        />
+      </form>
+    </fieldset>
 
     <script src="./styles/app.js"></script>
   </body>
