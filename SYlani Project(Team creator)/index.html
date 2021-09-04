@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Saylani Project</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
 </head>
 <body>
-    <fieldset>
-        <legend><b>Log in</b></legend>
-    <form>
-        Email <br>
-        <input type="email" id="email1" placeholder="email...."><br>
-        Password <br>
-        <input type="password" id="pass1" placeholder="password...."><br>
-        <button type="submit"><b>Log in</b></button>
-    </form>
-</fieldset>
-    <script src="./apps/app.js"></script>
+  
+ 
+<div id="welcome_box">
+      Welcome User: <span id="user"></span>
+      <div>
+          <button onclick="logout()">Logout</button>
+      </div>
+  </div>
+
+  <fieldset>
+    <legend>Login</legend>
+    <div id="login_box">
+      Email: <br>
+      <input type="email" id="email" /><br> <hr>
+      Password: <br>
+      <input type="password" id="password" /><br> <hr>
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Signup</button><br>
+  </div>
+  </fieldset>
+
+  <!-- <script type="module"></script> -->
+  <script src="./apps/app.js"></script>
 </body>
 </html>

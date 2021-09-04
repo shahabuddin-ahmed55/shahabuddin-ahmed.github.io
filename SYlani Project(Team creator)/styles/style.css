@@ -1,24 +1,32 @@
-*{
-    margin: 0%;
-    padding: 0%;
+#login_box {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 25px;
 }
-form{
-    font-size: 25px;
-    margin: 85px;
-    margin-left: 250px;
+#login_box button{
+    background-color: cadetblue;
+    height: 25px;
+    width: 55px;
+    justify-content: center;
+    margin-left: auto;
 }
-form input
-{
-    border: none;
-    text-decoration-line: underline;
-    padding-bottom: 25px;
-    cursor: pointer;
+#team {
+  display: flex;
+  text-align: left;
+  text-align: center;
+  flex-direction: column;
+  font-size: 17px;
 }
-form button{
-    background-color: teal;
-    color: white;
-    width: 50px;
-    height: 40px;
-    margin-left: 200px;
-    margin-top: 12px;
+#signup button {
+  background-color: cadetblue;
+  height: 25px;
+  width: 55px;
+  justify-content: center;
+  margin-left: auto;
+}
+.teamDiv{
+    border: 1px black solid;
+    margin: 45px auto;
 }
