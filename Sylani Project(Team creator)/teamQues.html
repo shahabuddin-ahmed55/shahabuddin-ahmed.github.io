@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports and setting</title>
+    <link rel="stylesheet" href="./styles/teamQues.css" />
+  </head>
+  <style>
+    .setting,
+    .report {
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+      padding: 10px;
+      /* border: green 1px solid; */
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+    }
+    .settingBar a:hover {
+      text-decoration: underline blue;
+    }
+    .settingBar {
+      margin: 5px;
+    }
+    .report .selectBar {
+      display: flex;
+      justify-content: space-between;
+    }
+    .report .selectBar input,
+    select {
+      border: groove grey 1.5px;
+    }
+    .report .question {
+      margin: 5vh ;
+    }
+    .setting .questionMaker {
+      margin: 5px;
+    }
+    .setting .questionMaker input {
+      margin-top: 8px;
+      width: 30vw;
+      height: 5vh;
+      border: transparent;
+    }
+    .setting .members span{
+      display: inline-flex;
+      margin: 10px;
+    }
+    .setting .addMembers{
+      margin: 20px 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .setting .saveAndDelete {
+      display: flex;
+      margin: 10px;
+    }
+    .setting .saveAndDelete button{
+      margin: 8px 13px;
+      height: 5vh;
+      width: 17vw;
+    }
+  </style>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Team Reports</legend>
+
+        <!-- Navigation Bar -->
+        <div class="settingBar">
+          <a href="" onclick="report">Report</a>
+          <a href="" onclick="setting">Setting</a>
+          <hr />
+        </div>
+
+        <!-- Report tab codding -->
+        <div class="report">
+          <div class="selectBar">
+            <select id="memberSelect">
+              <option value=""></option>
+              <option value="all members">All members</option>
+            </select>
+            <input type="date" />
+          </div>
+
+          <div class="question">
+            name: 09-09-2021 <br />
+            Q: What did do you today?<br />
+            A: Nothing <br />
+            Q: What will you do tomorrow? <br />
+            A: Nothing <br />
+            Q: Are there any blokers on your way? <br />
+            A: Nothing <br />
+          </div>
+        </div>
+
+        <!-- Setting tab codding -->
+        <div class="setting">
+          <div class="questionMaker">
+            Questions:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="text"
+              placeholder="Enter your questions"
+            />
+            <hr />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="text"
+              placeholder="Enter your questions"
+            />
+            <hr />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="text"
+              placeholder="Enter your questions"
+            />
+            <hr />
+          </div>
+
+          <div class="members">
+            Members: <br>
+            <span>member 1</span>
+            <span>member 2</span>
+            <span>member 3</span>
+          </div>
+          <div class="addMembers">
+            <input type="email" placeholder="Add Members" style="width: 23vw; height: 5vh;"/><br />
+            <button>Add</button>
+          </div>
+          <div class="saveAndDelete">
+            <button>Save changes</button>
+            <button>Cancel</button>
+            <button>Delete Team</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

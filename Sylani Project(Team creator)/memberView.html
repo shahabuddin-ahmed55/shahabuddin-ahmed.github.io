@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member view</title>
+    <style>
+.memberView{
+    display: flex;
+    flex-direction: column;
+}
+.memberView h4, p{
+    display: flex;
+    flex-direction: row;
+}
+.memberView .memberQuestion{
+    margin: 15px;
+}
+.memberView .memberQuestion input{
+    margin: 8px;
+    padding: 5px;
+    width: fit-content;
+    border: transparent;
+}
+.memberView .memberQuestion button{
+    margin-top: 5px;
+    height: 5vh;
+    margin-left: 40vw;
+}
+    </style>
+</head>
+<body>
+    <div class="memberView">
+        <h4>Filling for:</h4> 
+        10-September-2021
+        <div class="memberQuestion">
+            Q. What did you do today?<br>
+            <input type="text"><hr>
+            Q. What will you do today?<br>
+            <input type="text"><hr>
+            Q. What did you do today?<br>
+            <input type="text"><hr>
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+</html>

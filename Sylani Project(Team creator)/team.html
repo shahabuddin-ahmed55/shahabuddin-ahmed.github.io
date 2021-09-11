@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+        #team{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+        }
+        #team div{
+            display: flex;
+            flex-direction: column;
+            border: 1px gray solid;
+            margin: inherit;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            align-items: center;
+            /* padding-inline-start: 35%; */
+            /* display: inline-block; */
+        }
+        #team div h3{
+            display: flex;
+            justify-content: center;
+        }
+        #team button{
+            border: 5px lightseagreen groove;
+            background-color: lightseagreen;
+            border-radius: 50%;
+            display: flex;
+            margin-top: 5px;
+            margin-left: 950px;
+        }
+       
+    </style>
+  </head>
+  <body>
+
     <fieldset id="team">
-        <legend>Teams</legend>
-        <h3>Teams you own</h3>
-        <div class="teamDiv"></div>
-        <div class="teamDiv"></div>
+      <legend>Teams</legend>
+      <div class="TeamsYouOwn">
+          <h3>Teams you own</h3>
+
+          </div>
+      <div class="TeamsYouPart">
         <h3>Teams you're part of</h3>
-        <div class="teamDiv"></div>
-        <div class="teamDiv"></div>
         
+        </div>
+        <button>+</button>
     </fieldset>
-</body>
+
+
+    <script src="./apps/app.js"></script>
+  </body>
 </html>
