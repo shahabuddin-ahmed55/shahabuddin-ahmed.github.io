@@ -3,6 +3,7 @@ const login = () => {
     const password = document.getElementById("password").value;
     console.log(email, password);
 
+
 }
 firebase.auth().signInWithEmailAndPassword(email, password)
 .then((userCredential) => {
@@ -29,6 +30,7 @@ function logout() {
 function signup() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    document.getElementById("cT1").innerHTML = 
     console.log(email, password);
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
