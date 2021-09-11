@@ -28,14 +28,15 @@ function logout() {
 }
 
 function signup() {
+    const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    document.getElementById("cT1").innerHTML = 
-    console.log(email, password);
+    console.log(username, email, password);
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Signed in 
             var user = userCredential.user;
+            window.location = 'creatTeam.html'
             // ...
         })
         .catch((error) => {
