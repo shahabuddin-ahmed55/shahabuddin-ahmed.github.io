@@ -5,79 +5,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <link rel="stylesheet" href="./styles/style.css">
-  <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script> -->
-    <style>
-      .border, .signin{
-  height: 75vh;
-  width: 75vw;
-  margin: auto;
-  margin-top: 25px;
-  /* position: relative; */
-  border: 2px lightgrey solid;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-.border, .signin label, button{
-  margin: 8px;
-  font-family: 'Courier New', Courier, monospace;
-  text-decoration: transparent;
-}
+  <style>
+    #login, #creatTeam{
+      margin: 25px;
+      padding: auto;
+      border: grey 1px solid;
+      padding: 100px;
+    }
+    #login button{
+      margin: 10px;
+      width: 55px;
+      height: 35px;
+      padding: 5px;
+    }
 
-    </style>
-</head>
-<body>
+  </style>
+ <body>
 
-<!-- <div id="welcome_box">
-      Welcome User: <span id="user"></span>
-      <div>
-          <button onclick="logout()">Logout</button>
-      </div>
+   <div id="login">
+   Email: <input type="email" id="email"><br><br><br><hr>
+   Password: <input type="password" id="password"><br><br><br><hr>
+   <button onclick="login()">Login</button>
+   <button onclick="signup()">Signup</button>
+
+  </div>
+  <div id="creatTeam">
+    Welcome User: <span id="user"></span>
+    <div>
+        <button onclick="logout()">Logout</button>
+    </div>
   </div>
 
-  <fieldset>
-    <legend>Login</legend>
-    <div id="login_box">
-      Email: <br>
-      <input type="email" id="email" /><br> <hr>
-      Password: <br>
-      <input type="password" id="password" /><br> <hr>
-      <button onclick="login()">Login</button>
-      <button onclick="signup()">Signup</button><br>
-  </div>
-  </fieldset>
 
-  <script type="module"></script> -->
-  <form>
-  <div class="login">
-    <label>Email: <input type="email" id="email" placeholder="email"></label><hr>
-    <label>Password: <input type="password" id="password" placeholder="password"></label><hr>
-    <button onclick="login">Login</button>
-    <button onclick="signin">Signin</button>
-  </div>
-</form>
+  <script type="module">
 
-<form onsubmit="signUp(event)">
-  <div class="signin">
-    <label>Username: <input type="text" id="username" placeholder="username" required></label>
-    <label>Email: <input type="email" id="email" placeholder="email" required></label>
-    <label>Password: <input type="password" id="password" placeholder="password" required></label>
-    <button type="submit">signup</button>
-  </div>
-</form>
-  <script src="./apps/app.js">
-  if(true) {
-    document.getElementById("login").style.display = "block";
-    document.getElementById("signUp").style.display = "none";
-  }
-  const login = () => {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    console.log(email, password)
-  }
-  </script>
-</body>
+const firebaseConfig = {
+    apiKey: "AIzaSyBiFcFQd-MiM-4wIHyb_jK_fdFgIE_MQAg",
+    authDomain: "team-creater.firebaseapp.com",
+    projectId: "team-creater",
+    storageBucket: "team-creater.appspot.com",
+    messagingSenderId: "861396692052",
+    appId: "1:861396692052:web:9a4e92566bd920431391c1",
+    measurementId: "G-K0WWBHH7R9"
+  };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            console.log(user);
+            document.getElementById("user").innerHTML = user.email;
+            document.getElementById("login").style.display = "none";
+            document.getElementById("creatTeam").style.display = "block";
+        } else {
+            document.getElementById("login").style.display = "block";
+            document.getElementById("creatTeam").style.display = "none";
+        }
+    });
+</script>
+   <script src="./apps/app.js"></script>
+ </body>
 </html>
