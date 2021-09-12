@@ -2,22 +2,23 @@ const login = () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     console.log(email, password);
-
-
+    
+    
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+        // Signed in 
+        window.location = 'creatTeam.html'
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        // ..
+    });
 }
-firebase.auth().signInWithEmailAndPassword(email, password)
-.then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    console.log(user);
-    // ...
-})
-.catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log(errorMessage);
-    // ..
-});
 
 function logout() {
     firebase.auth().signOut().then(() => {
@@ -45,3 +46,12 @@ function signup() {
             // ..
         });
 }
+
+// TeamCreat Coodin
+
+function creat(){
+    const teamName = document.getElementById("teamName").value;
+    const teamCategory = document.getElementById("teamCategory").value;
+    const teamCategoryEmail = document.getElementById("teamCategoryEmail").value;
+    console.log(teamName, teamCategory, teamCategoryEmail)
+  }

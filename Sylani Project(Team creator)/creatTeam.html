@@ -6,47 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team Creat</title>
     <style>
-        .teamCreat{
-            display: flex;
-            text-align: center;
-            flex-direction: column;
-            margin: 20px 80px;
-        }
-        .teamCreat input{
-            padding: 20px;
-            border: transparent;
-            margin-top: 10px;
-        }
-        .teamCreat select{
-            padding: 10px;
-        }
-        .teamCreat .creat{
-            margin: 10px;
-        }
-        .teamCreat .creat button{
-            height: 5vh;
-            width: 10vh;
-            margin: 0px 8px;
-        }
+      .teamCreat {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin: 20px 80px;
+      }
+      .teamCreat input {
+        padding: 20px;
+        border: transparent;
+        margin-top: 10px;
+      }
+      .teamCreat select {
+        padding: 10px;
+      }
+      .teamCreat .creat {
+        margin: 10px;
+      }
+      .teamCreat .creat button {
+        height: 5vh;
+        width: 10vh;
+        margin: 0px 8px;
+      }
     </style>
   </head>
   <body>
-      <div class="teamCreat">
+    <div class="teamCreat">
       <h2>Creat Own Team</h2>
-      <input type="text" placeholder="Team Name" />
+      <input type="text" id="teamName" placeholder="Team Name" />
       <hr />
       <br />
-      <select>
+      <select name="Category" id="teamCategory">
         <option value="" selected>Category</option>
-        <option value="">Category</option>
-        <option value="">Category</option>
+        <option value="developers">Developer</option>
+        <option value="Office">Office</option>
+        <option value="schoolMembers">School</option>
       </select>
-      <input type="email" placeholder="Member (type email)" />
+      <input type="email" id="teamCategoryEmail" placeholder="Member (type email)" />
       <hr />
       <div class="creat">
-        <button>Creat</button>
+        <button onclick="creat()">Creat</button>
         <button>Cancel</button>
       </div>
     </div>
+
+    <script>
+    </script>
+    <script src="./apps/app.js"></script>
   </body>
 </html>
