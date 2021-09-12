@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <style>
+    #login, #creatTeam{
+      margin: 25px;
+      padding: auto;
+      border: grey 1px solid;
+      padding: 100px;
+    }
+    #login button{
+      margin: 10px;
+      width: 55px;
+      height: 35px;
+      padding: 5px;
+    }
+
+  </style>
+ <body>
+
+   <div id="login">
+     Username: <input type="text" id="username"><br><br><br><hr>
+   Email: <input type="email" id="email" required><br><br><br><hr>
+   Password: <input type="password" id="password" required><br><br><br><hr>
+   <button onclick="login()">Login</button>
+   <button onclick="signup()">Signup</button>
+
+  </div>
+  <div id="creatTeam">
+    Welcome User: <span id="user"></span>
+    <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+
+  <script type="module">
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBiFcFQd-MiM-4wIHyb_jK_fdFgIE_MQAg",
+    authDomain: "team-creater.firebaseapp.com",
+    projectId: "team-creater",
+    storageBucket: "team-creater.appspot.com",
+    messagingSenderId: "861396692052",
+    appId: "1:861396692052:web:9a4e92566bd920431391c1",
+    measurementId: "G-K0WWBHH7R9"
+  };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            console.log(user);
+            document.getElementById("user").innerHTML = user.email;
+            document.getElementById("login").style.display = "none";
+            document.getElementById("creatTeam").style.display = "block";
+        } else {
+            document.getElementById("login").style.display = "block";
+            document.getElementById("creatTeam").style.display = "none";
+        }
+    });
+</script>
+   <script src="./apps/app.js"></script>
+ </body>
+</html>
