@@ -54,4 +54,7 @@ function creat(){
     const teamCategory = document.getElementById("teamCategory").value;
     const teamCategoryEmail = document.getElementById("teamCategoryEmail").value;
     console.log(teamName, teamCategory, teamCategoryEmail)
+    window.location = 'team.html'
+    const element = document.getElementsByClassName("TeamsYouOwn");
+    element.innerHTML = "teamName <br /><hr /> teamCategory <br /><hr /> teamCategoryEmail";
   }
