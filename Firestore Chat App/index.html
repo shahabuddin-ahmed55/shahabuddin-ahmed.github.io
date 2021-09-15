@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat APp</title>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script defer src="./app.js"></script>
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="login">
+            <input type="email" id="email">
+            <input type="password" id="password">
+            <button onclick="login()" class="login">Login</button>
+            <button onclick="signin()" class="signin">Signin</button>
+        </div>
+        <div id="afterLogInBox">
+            <div class="header">
+                <div class="welcome">
+                    Login Succesfull:
+                    <span id="user"></span>
+                </div>
+
+                <div class="logged-in-info">
+                    <span id="lastLoggedIn"></span>
+                </div>
+
+                <div>
+                    <button onclick="logout()" class="logout">Logout</button>
+                </div>
+            </div>
+
+            <div id="messages"></div>
+
+            <div>
+                <input type="text" is="message" placeholder="Type a message">
+                <button onclick="sendMessage()" class="sendButton">Send</button>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
