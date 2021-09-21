@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Practice</title>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="firebase.app"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: rgba(#fff, #000, #000, 0.2);
+        }
+        #container{
+            display: flex;
+            /* flex-direction: column; */
+            margin: 5px;
+            border: 1px double yellow;
+            /* border-radius: 50%; */
+            /* position: relative; */
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="login">
+        <label for="email"></label>
+        <label for="password"></label>
+        <b>Email</b>: <input type="email" id="email" placeholder="Enter email here...." required>
+        <b>Password</b>: <input type="password" id="password" placeholder="Enter passwordhere...." required>
+        <button id="login">Login</button>
+        <button id="signup">Signup</button>
+    </div>
+</div>
+
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -128,6 +128,7 @@ const firebaseConfig = {
   measurementId: "G-BKDPQXWGQH",};
 
 // Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const firestore = firebase.firestore();
