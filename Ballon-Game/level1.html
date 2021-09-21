@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balloon Game</title>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/bootstrap.css">
+</head>
+<style>
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  #balloon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-color: lime;
+  }
+
+  #balloon div {
+    display: flex;
+    justify-content: space-between;
+    /* flex-flow: row wrap;style="background-color: yellow;" */
+    margin: 20px;
+    width: 225px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+
+
+  }
+</style>
+
+<body>
+
+    <!-- Logout button -->
+  <div>
+  <button onclick="logout()">Logout</button>
+  <span id="user"></span>
+  </div>
+
+
+
+  <div id="balloon">
+    <h2 class="h2">Level 01: Choose yellow Ballon</h2><br><br><br>
+    <br><br>
+    <div id="yellow" onmouseover="yellow()" style="background-color: yellow;"></div>
+    <div id="red" style="background-color: red;"></div>
+    <div id="red" style="background-color: purple;"></div>
+    <div id="yellow1" onmouseover="yellow1()" style="background-color: yellow;"></div>
+    <div id="red" style="background-color: beige;"></div>
+    <div id="red" style="background-color: moccasin;"></div>
+    <div id="red" style="background-color: orange;"></div>
+    <div id="yellow2" onmouseover="yellow2()" style="background-color: yellow;"></div>
+    <div id="red" style="background-color: brown;"></div>
+
+  </div>
+  <button style="float: right;" onclick="level2()">Next Level</button>
+
+
+  <script>
+    let event1 = document.getElementById("yellow").addEventListener("mouseover", function () {
+      document.getElementById("yellow").style = "background: none; margin: 75px 0px 0px 60px; font-size: 25px; position: absoloute";
+      
+    });
+    document.getElementById("yellow").addEventListener("mouseover", function () {
+      document.getElementById("yellow").innerText = "PoPup";
+    });
+    
+    document.getElementById("yellow1").addEventListener("mouseover", function () {
+      document.getElementById("yellow1").style = "background: none; margin: 75px 0px 0px 60px; font-size: 25px";
+    });
+    document.getElementById("yellow1").addEventListener("mouseover", function () {
+      document.getElementById("yellow1").innerText = "PoPup";
+    });
+    
+    document.getElementById("yellow2").addEventListener("mouseover", function () {
+      document.getElementById("yellow2").style = "background: none; margin: 75px 0px 0px 60px; font-size: 25px";
+    });
+    document.getElementById("yellow2").addEventListener("mouseover", function () {
+      document.getElementById("yellow2").innerText = "PoPup";
+    });
+    
+    document.getElementById("red").addEventListener("mouseover", function(){
+      alert("Wrong!!!")
+    })
+
+    function level2(){
+      window.location = 'level2.html'
+    }
+    
+    </script>
+    <script src="./Jid.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 02</title>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <style>
+         * {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  #balloon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(28, 183, 194);
+  }
+
+  #balloon div {
+    display: flex;
+    justify-content: space-between;
+    /* flex-flow: row wrap;style="background-color: yellow;" */
+    margin: 25px;
+    width: 225px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+
+
+  }
+    </style>
+
+</head>
+<body>
+
+    <!-- Logout button -->
+    <div>
+        <button onclick="logout()">Logout</button>
+        <span id="user"></span>
+        </div>
+      
+
+<!-- Balloon -->
+  <div id="balloon">
+    <h2 class="h2">Level 02: Choose MehroonRed Balloon</h2><br><br><br>
+    <br><br>
+    <div id="red" onmouseover="red()" style="background-color: rgba(221, 6, 6, 0.288);"></div>
+    <div id="yellow" style="background-color: yellow;"></div>
+    <div id="purple" style="background-color: purple;"></div>
+    <div id="red1" onmouseover="red1()" style="background-color: rgba(221, 6, 6, 0.288);"></div>
+    <div id="beige" style="background-color: beige;"></div>
+    <div id="moccasin" style="background-color: moccasin;"></div>
+    <div id="orange" style="background-color: orange;"></div>
+    <div id="red2" onmouseover="red2()" style="background-color: rgba(221, 6, 6, 0.288);"></div>
+    <div id="brown" style="background-color: brown;"></div>
+    <div id="olive" style="background-color: olive;"></div>
+    <div id="azure" style="background-color: azure;"></div>
+    <div id="violet" style="background-color: violet;"></div>
+    <div id="saddlebrown" style="background-color: saddlebrown;"></div>
+
+
+
+<script>
+
+    document.getElementById("red").addEventListener("mouseover", function () {
+      document.getElementById("red").style = "background: none; margin: 75px 0px 0px 60px; font-size: 25px; position: absoloute";
+      
+    });
+    document.getElementById("red").addEventListener("mouseover", function () {
+      document.getElementById("red").innerText = "PoPup";
+    });
+
+    document.getElementById("red1").addEventListener("mouseover", function () {
+      document.getElementById("red1").style = "background: none; margin: 75px 0px 0px 60px; font-size: 25px; position: absoloute";
+      
+    });
+    document.getElementById("red1").addEventListener("mouseover", function () {
+      document.getElementById("red1").innerText = "PoPup";
+    });
+
+    document.getElementById("red2").addEventListener("mouseover", function () {
+      document.getElementById("red2").style = "background: none; margin: 75px 0px 0px 60px; font-size: 25px; position: absoloute";
+      
+    });
+    document.getElementById("red2").addEventListener("mouseover", function () {
+      document.getElementById("red2").innerText = "PoPup";
+    });
+
+
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    
+        setInterval(function(x){
+            const ele = document.getElementById("yellow").id = randomColor;
+            console.log(ele);
+        }, 3000)
+
+</script>
+
+
+</body>
+</html>
